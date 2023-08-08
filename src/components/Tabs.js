@@ -17,7 +17,7 @@ const Tabs = ({ mode, open, setOpen }) => {
         <Link href="/" onClick={() => handleClose()}>{translate("cero")}</Link>
         <Link href="/work" onClick={() => handleClose()}>{translate("one")}</Link>
         <Link href="/" onClick={() => handleClose()}>{translate("two")}</Link>
-        <Link href="/" onClick={() => handleClose()}>{translate("three")}</Link>
+        <Link href="/contact" onClick={() => handleClose()}>{translate("three")}</Link>
       </TabsBox>
     </>
   );

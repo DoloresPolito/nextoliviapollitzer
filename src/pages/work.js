@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import styled from "styled-components";
 import { useTranslation } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
-// import Navbar from "../components/Navbar";
+import Navbar from "../components/Navbar";
 
 const Work = () => {
 
@@ -26,23 +26,23 @@ const Work = () => {
   return (
     <>
       <Page>
-        {/* <motion.div
+        <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           transition={{ duration: 0.5, ease: "easeOut" }}
-        > */}
-        <div>
-          {/* <Navbar /> */}
+        >
+    
+          <Navbar />
 
           <WorkSection>
-            <ul
+            <motion.ul
               style={{ listStyle: "none" }}
-              // variants={container}
-              // initial="hidden"
-              // animate="show"
+              variants={container}
+              initial="hidden"
+              animate="show"
             >
-              <li variants={item}>
+              <motion.li variants={item}>
                 <WorkLi>
                   <WorkDate>
                     <p>{translate("one.year")}</p>
@@ -52,8 +52,8 @@ const Work = () => {
                     <More>{translate("one.subtitle")}</More>
                   </Content>
                 </WorkLi>
-              </li>
-              <li variants={item}>
+              </motion.li>
+              <motion.li variants={item}>
                 <WorkLi>
                   <WorkDate>
                     <p>{translate("two.year")}</p>
@@ -63,8 +63,8 @@ const Work = () => {
                     <More>{translate("two.subtitle")}</More>
                   </Content>
                 </WorkLi>
-              </li>
-              <li variants={item}>
+              </motion.li>
+              <motion.li variants={item}>
                 <WorkLi>
                   <WorkDate>
                     <p>{translate("three.year")}</p>
@@ -74,9 +74,9 @@ const Work = () => {
                     <More>{translate("three.subtitle")}</More>
                   </Content>
                 </WorkLi>
-              </li>
+              </motion.li>
 
-              {/* <motion.li variants={item}>
+            <motion.li variants={item}>
                 <WorkLi>
                   <WorkDate>
                     <p>{translate("four.year")}</p>
@@ -108,11 +108,11 @@ const Work = () => {
                     <More>{translate("six.subtitle")}</More>
                   </Content>
                 </WorkLi>
-              </motion.li> */}
-            </ul>
+              </motion.li> 
+            </motion.ul>
           </WorkSection>
-        {/* </motion.div> */}
-        </div>
+        </motion.div>
+
       </Page>
     </>
   );

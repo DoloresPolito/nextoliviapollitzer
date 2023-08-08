@@ -52,7 +52,7 @@ const Navbar = () => {
                 <Link href="/">{translate("cero")}</Link>
                 <Link href="/work"> {translate("one")}</Link>
                 <Link href="/">{translate("two")}</Link>
-                <Link href="/"> {translate("three")}</Link>
+                <Link href="/contact"> {translate("three")}</Link>
               </TabsBox>
               <section>
                 {locales.map((l) => (

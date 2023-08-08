@@ -88,18 +88,18 @@ const CoverSection = styled.div`
     position: absolute;
     height: 600px;
     width: 600px;
-    top: 70px;
+    top: 110px;
 
     @media only screen and (max-width: 1160px) {
       height: 500px;
       width: 500px;
-      top: 80px;
+      top: 130px;
     }
 
     @media only screen and (max-width: 700px) {
       height: 400px;
       width: 400px;
-      top: 110px;
+      top: 200px;
     }
 
     @media only screen and (max-width: 450px) {

@@ -17,7 +17,6 @@ const Footer = () => {
   const [width, setWidth] = useState(null);
   const [view, setView] = useState();
 
-
   const { t: translate } = useTranslation("footer");
 
   useEffect(() => {
@@ -54,33 +53,47 @@ const Footer = () => {
 
   return (
     <>
-      <FooterSection>
+      <FooterSection mode={width}>
         {width > 800 ? (
           <>
-            <FooterContainer>
+            <FooterContainer mode={width} ref={ref}>
               <motion.div>
                 <ImageDiv>
-                <Image src={logo} alt="logo" />
+                  <Image src={logo} alt="logo" />
                 </ImageDiv>
               </motion.div>
             </FooterContainer>
 
-            <Column1>
+            <Column1 animate={animation}>
               <FooterTitle>{translate("title")}</FooterTitle>
               <section>
                 <Circle>
-                <Image src={mail} alt="mail" />
+                  <a href="mailto:oliviapollitzer@gmail.com">
+                    <Image src={mail} alt="mail" />
+                  </a>
                 </Circle>
                 <Circle>
-                <Image src={instagram} alt="instagram" />
+                  <a
+                    href="https://www.instagram.com/olipollitzer/"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <Image src={instagram} alt="instagram" />
+                  </a>
                 </Circle>
                 <Circle>
-                <Image src={linkedin} alt="linkedin" />
+                  <a
+                    href="https://www.linkedin.com/in/olivia-pollitzer-31396817a/"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <Image src={linkedin} alt="linkedin" />
+                  </a>
                 </Circle>
               </section>
             </Column1>
 
-            <Column2>
+            <Column2 animate={animation}>
               <ul className="list">
                 <Link href="/">
                   <li>{translate("services")}</li>
@@ -88,7 +101,7 @@ const Footer = () => {
                 <Link href="/">
                   <li>{translate("work")}</li>
                 </Link>
-                <Link href="/">
+                <Link href="/contact">
                   <li>{translate("contact")}</li>
                 </Link>
                 <Link href="/work">
@@ -98,7 +111,7 @@ const Footer = () => {
             </Column2>
 
             <CopyRight>
-              <p></p>
+              <p>{translate("rights")}</p>
             </CopyRight>
           </>
         ) : (
@@ -107,38 +120,59 @@ const Footer = () => {
               <MobileContainer>
                 <Div>
                   <div>
-                    <FooterTitle> </FooterTitle>
+                    <FooterTitle>{translate("title")}</FooterTitle>
                     <div style={{ display: "flex", flexDirection: "row" }}>
                       <Circle>
-                      <Image src={mail} alt="mail" />
+                        <a href="mailto:oliviapollitzer@gmail.com">
+                          <Image src={mail} alt="mail" />
+                        </a>
                       </Circle>
                       <Circle>
-                      <Image src={instagram} alt="instagram" />
+                        <a
+                          href="https://www.instagram.com/olipollitzer/"
+                          target="_blank"
+                          rel="noreferrer"
+                        >
+                          <Image src={instagram} alt="instagram" />
+                        </a>
                       </Circle>
                       <Circle>
-                      <Image src={linkedin} alt="linkedin" />
+                        <a
+                          href="https://www.linkedin.com/in/olivia-pollitzer-31396817a/"
+                          target="_blank"
+                          rel="noreferrer"
+                        >
+                          <Image src={linkedin} alt="linkedin" />
+                        </a>
                       </Circle>
                     </div>
                   </div>
 
                   <ul className="list">
-                  <Link href="/">
-                  <li>{translate("services")}</li>
-                </Link>
-                <Link href="/">
-                  <li>{translate("work")}</li>
-                </Link>
-                <Link href="/">
-                  <li>{translate("contact")}</li>
-                </Link>
-                <Link href="/work">
-                  <li>{translate("about")}</li>
-                </Link>
+                    <Link href="/">
+                      <li>{translate("services")}</li>
+                    </Link>
+                    <Link href="/">
+                      <li>{translate("work")}</li>
+                    </Link>
+                    <Link href="/contact">
+                      <li>{translate("contact")}</li>
+                    </Link>
+                    <Link href="/work">
+                      <li>{translate("about")}</li>
+                    </Link>
                   </ul>
                 </Div>
 
+                <div>
+              {" "}
+              {/* <Logo2 src={logo} alt="logo" /> */}
+            </div>
 
-                <CopyRight2><p></p></CopyRight2>
+                <CopyRight2>
+                  {" "}
+                  <p>{translate("rights")}</p>
+                </CopyRight2>
               </MobileContainer>
             </MobileSection>
           </>
@@ -153,9 +187,12 @@ const FooterSection = styled.div`
   background-color: #5f5f67;
   color: #f6f6f6;
   display: flex;
+  flex-direction: row;
   width: 100%;
   margin: auto;
   height: ${(props) => (props.mode > 800 ? "300px" : "400px")};
+
+
 
   @media only screen and (max-width: 450px) {
   }
@@ -165,7 +202,10 @@ const FooterContainer = styled(motion.div)`
   height: 200px;
   width: 85%;
   margin: auto;
-  position: relative;
+  flex-direction: row;
+
+  /* position: relative; */
+
 
   @media only screen and (max-width: 450px) {
     width: 100%;
@@ -204,11 +244,15 @@ const Logo2 = styled.img`
   width: 240px;
 `;
 const Column1 = styled(motion.div)`
+
+
   display: flex;
   flex-direction: column;
+
+  margin-top: 35px;
+  margin-right: 10px;
   position: absolute;
   right: 310px;
-  top: 50px;
 
   section {
     display: flex;
