@@ -162,7 +162,6 @@ const ServiceSection = styled.div`
     height: auto;
   }
 `;
-
 const Box = styled(motion.div)`
   display: flex;
   flex-direction: column;
@@ -179,7 +178,6 @@ const Box = styled(motion.div)`
     height: 400px;
   }
 `;
-
 const Content = styled.div`
   display: flex;
   flex-direction: column;
@@ -202,7 +200,6 @@ const Content = styled.div`
     text-align: left;
   }
 `;
-
 const H2 = styled(motion.h2)`
   color: #ffffff;
   font-family: var(--font-bebasneue);
@@ -213,7 +210,6 @@ const H2 = styled(motion.h2)`
   margin-top: 50px;
   font-family: var(--font-bebasneue);
 `;
-
 const ServicesContainer = styled.div`
   width: 550px !important;
   display: flex;
@@ -221,8 +217,6 @@ const ServicesContainer = styled.div`
   justify-content: center;
   /* margin-left: 180px; */
   background-color: red;
-
-
   p {
     font-weight: 500;
     color: #5f5f67;
@@ -313,7 +307,6 @@ const ServicesContainer = styled.div`
     margin-bottom: 3px;
   }
 `;
-
 const BoldLine = styled(motion.div)`
   border-top: 4px solid #ffffff;
   height: 2px;
@@ -321,7 +314,6 @@ const BoldLine = styled(motion.div)`
   margin-top: -45px;
   margin-bottom: 15px;
 `;
-
 const ServiceContainerMobile = styled(motion.div)`
   width: 100%;
   margin-bottom: 80px;
@@ -363,7 +355,6 @@ const ServiceContainerMobile = styled(motion.div)`
     }
   }
 `;
-
 const MobileLine = styled.div`
   border-top: 1.5px solid #5f5f67;
   width: 100%;

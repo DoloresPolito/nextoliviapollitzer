@@ -2,22 +2,22 @@ import Head from "next/head";
 // import GlobalStyles from "../styles/global";
 // import { ParallaxProvider } from "react-scroll-parallax";
 import { appWithTranslation } from "next-i18next";
-import {Bebas_Neue, Montserrat} from '@next/font/google'
+// import {Bebas_Neue, Montserrat} from '@next/font/google'
 
 
-const bebasneue = Bebas_Neue({
-  subsets:['latin'],
-  weight:['400'],
-  variable:'--font-bebasneue',
+// const bebasneue = Bebas_Neue({
+//   subsets:['latin'],
+//   weight:['400'],
+//   variable:'--font-bebasneue',
 
-})
+// })
 
-const montserrat = Montserrat({
-  subsets:['latin'],
-  weight:['300', '400','500','600'],
-  variable:'--font-montserrat',
+// const montserrat = Montserrat({
+//   subsets:['latin'],
+//   weight:['300', '400','500','600'],
+//   variable:'--font-montserrat',
 
-})
+// })
 
 const MyApp = ({ Component, pageProps }) => {
   return (
@@ -32,8 +32,8 @@ const MyApp = ({ Component, pageProps }) => {
         <meta name="description" content="Edición y Escritura" />
       </Head>
   
-        <div className={` ${bebasneue.variable} ${montserrat.variable} font-sans`}>
-        
+        {/* <div className={` ${bebasneue.variable} ${montserrat.variable} font-sans`}> */}
+        <div >
           <Component {...pageProps} />
         </div>
  

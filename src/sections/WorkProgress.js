@@ -120,7 +120,6 @@ const WorkProgressSection = styled.div`
 background-color: red;
   } */
 `;
-
 const Content = styled(motion.div)`
   display: flex;
   flex-direction: row;
@@ -156,7 +155,6 @@ const Content = styled(motion.div)`
     }
   }
 `;
-
 const Icons = styled.div`
   display: flex;
   flex-direction: row;
@@ -172,7 +170,6 @@ const Icons = styled.div`
     }
   }
 `;
-
 const Titles = styled.div`
   display: flex;
   flex-direction: row;
@@ -202,7 +199,6 @@ const Titles = styled.div`
     }
   }
 `;
-
 const Numbers = styled.div`
   display: flex;
   flex-direction: row;
@@ -235,7 +231,6 @@ const Numbers = styled.div`
     }
   }
 `;
-
 const Texts = styled.div`
   display: flex;
   flex-direction: row;

@@ -42,13 +42,7 @@ section {
 display: flex;
 flex-direction: column;
 justify-content: flex-start;
-/* background-color: #EAE9E5; */
-background-color: ${(props) =>
-  props.view === "oliviapollitzer" ||
-  props.view === "oliviapollitzer?services"
-    ? " #EAE9E5 !important"
-    : "#f6f6f6 !important"};
-
+background-color: #EAE9E5;
 text-align: left;
 padding: 150px 100px 30px 30px;
 position: fixed;
@@ -59,7 +53,6 @@ bottom: 0;
 transition: transform 0.3s ease-in-out;
 transform: ${({ open }) => (open ? "translateX(0)" : "translateX(100%)")};
 `;
-
 const LanguageButton = styled.button`
 background-color: transparent;
 border: none;

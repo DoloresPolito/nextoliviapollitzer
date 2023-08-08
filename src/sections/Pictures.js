@@ -104,12 +104,10 @@ const InstaResumeSection = styled.div`
     padding-bottom: 50px;
   }
 `;
-
 const ImageContainer = styled.div`
   margin: 5px;
   height: 350px;
   width: 250px;
-
   @media only screen and (max-width: 1100px) {
     height: 280px;
     width: 200px;
@@ -133,7 +131,6 @@ const ImageContainer = styled.div`
     opacity: 0.7;
   }
 `;
-
 const ResumeGallery = styled(motion.div)`
   display: flex;
   flex-direction: row;
@@ -161,7 +158,6 @@ const ResumeGallery = styled(motion.div)`
     }
   } */
 `;
-
 const Row = styled.div`
   display: flex;
   flex-direction: row;

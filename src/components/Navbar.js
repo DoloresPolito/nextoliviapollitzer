@@ -92,7 +92,6 @@ const LogoContainer = styled.div`
     width: 160px;
   }
 `;
-
 const InstaContainer = styled.div`
   position: absolute;
   left: 0px;
@@ -109,19 +108,10 @@ const InstaContainer = styled.div`
     width: 60px;
   }
 `;
-
 const NavbarSection = styled.div`
   z-index: 100;
+  background-color: #EAEAEA;
 
-  background-color: ${(props) =>
-    props.view === "oliviapollitzer" ||
-    props.view === "oliviapollitzer?services"
-      ? " #EAE9E5 !important"
-      : "#f6f6f6 !important"};
-
-  /* background-color: #EAE9E5 !important; */
-  /* background-color: #EAEAEA; */
-  /* position: ${(props) => props.mode}; */
   top: 0;
   width: 100%;
   height: 80px;
@@ -135,7 +125,6 @@ const NavbarSection = styled.div`
     z-index: 3;
     color: #5f5f67;
   }
-
   section {
     background-color: transparent;
     border: none;
@@ -162,7 +151,6 @@ const NavbarSection = styled.div`
     padding: 10px 10px;
   }
 `;
-
 const Container = styled.div`
   /* margin: auto; */
   max-width: 1140px;
@@ -178,7 +166,6 @@ const Container = styled.div`
     /* padding 24px 0;  */
   }
 `;
-
 const NavbarContainer = styled(Container)`
   padding: 0;
   margin-top: 0;
@@ -193,7 +180,6 @@ const NavbarContainer = styled(Container)`
     align-items: center;
   }
 `;
-
 const TabsBox = styled.div`
   display: ${(props) => (props.mode === "large" ? "flex" : "block")};
   align-items: center;
@@ -219,7 +205,6 @@ const TabsBox = styled.div`
     margin: 0 35px 0 0;
   }
 `;
-
 const Circle = styled.div`
   display: flex;
   align-items: center;
@@ -236,7 +221,6 @@ const Circle = styled.div`
     width: 22px;
   }
 `;
-
 const LanguageButton = styled.button`
   background-color: transparent;
   border: none;

@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import styled from "styled-components";
 import { useTranslation } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
-import Navbar from "../components/Navbar";
+// import Navbar from "../components/Navbar";
 
 const Work = () => {
 
@@ -26,22 +26,23 @@ const Work = () => {
   return (
     <>
       <Page>
-        <motion.div
+        {/* <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           transition={{ duration: 0.5, ease: "easeOut" }}
-        >
-          <Navbar />
+        > */}
+        <div>
+          {/* <Navbar /> */}
 
           <WorkSection>
-            <motion.ul
+            <ul
               style={{ listStyle: "none" }}
-              variants={container}
-              initial="hidden"
-              animate="show"
+              // variants={container}
+              // initial="hidden"
+              // animate="show"
             >
-              <motion.li variants={item}>
+              <li variants={item}>
                 <WorkLi>
                   <WorkDate>
                     <p>{translate("one.year")}</p>
@@ -51,8 +52,8 @@ const Work = () => {
                     <More>{translate("one.subtitle")}</More>
                   </Content>
                 </WorkLi>
-              </motion.li>
-              <motion.li variants={item}>
+              </li>
+              <li variants={item}>
                 <WorkLi>
                   <WorkDate>
                     <p>{translate("two.year")}</p>
@@ -62,8 +63,8 @@ const Work = () => {
                     <More>{translate("two.subtitle")}</More>
                   </Content>
                 </WorkLi>
-              </motion.li>
-              <motion.li variants={item}>
+              </li>
+              <li variants={item}>
                 <WorkLi>
                   <WorkDate>
                     <p>{translate("three.year")}</p>
@@ -73,9 +74,9 @@ const Work = () => {
                     <More>{translate("three.subtitle")}</More>
                   </Content>
                 </WorkLi>
-              </motion.li>
+              </li>
 
-              <motion.li variants={item}>
+              {/* <motion.li variants={item}>
                 <WorkLi>
                   <WorkDate>
                     <p>{translate("four.year")}</p>
@@ -107,10 +108,11 @@ const Work = () => {
                     <More>{translate("six.subtitle")}</More>
                   </Content>
                 </WorkLi>
-              </motion.li>
-            </motion.ul>
+              </motion.li> */}
+            </ul>
           </WorkSection>
-        </motion.div>
+        {/* </motion.div> */}
+        </div>
       </Page>
     </>
   );
@@ -121,7 +123,6 @@ const Page = styled.div`
   width: 100%;
   background-color: red;
 `;
-
 const WorkSection = styled.div`
   width: 100%;
   padding-top: 100px;
@@ -136,7 +137,6 @@ const WorkSection = styled.div`
     padding-bottom: 80px;
   }
 `;
-
 const WorkLi = styled.div`
   display: flex;
   flex-direction: row;
@@ -147,7 +147,6 @@ const WorkLi = styled.div`
     width: 80%;
   }
 `;
-
 const WorkDate = styled.div`
   display: flex;
   justify-content: center;
@@ -168,7 +167,6 @@ const WorkDate = styled.div`
 
   /* margin-top: 60px; */
 `;
-
 const Content = styled.div`
   display: flex;
   flex-direction: column;
@@ -190,7 +188,6 @@ const WorkTitle = styled.h4`
     font-size: 20px;
   }
 `;
-
 const More = styled.p`
   /* font-family: "Montserrat", sans-serif; */
   font-family: var(--font-montserrat);
@@ -202,7 +199,6 @@ const More = styled.p`
     font-size: 12px;
   }
 `;
-
 export async function getStaticProps({ locale }) {
   return {
     props: {

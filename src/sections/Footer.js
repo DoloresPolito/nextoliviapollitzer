@@ -160,7 +160,6 @@ const FooterSection = styled.div`
   @media only screen and (max-width: 450px) {
   }
 `;
-
 const FooterContainer = styled(motion.div)`
   display: flex;
   height: 200px;
@@ -172,7 +171,6 @@ const FooterContainer = styled(motion.div)`
     width: 100%;
   }
 `;
-
 const Logo = styled.img`
   position: relative;
   left: 20px;
@@ -184,7 +182,6 @@ const Logo = styled.img`
     top: 30px;
   }
 `;
-
 const ImageDiv = styled.div`
   /* position: relative; */
   width: 10px;
@@ -203,11 +200,9 @@ const ImageDiv = styled.div`
     top: 30px;
   }
 `;
-
 const Logo2 = styled.img`
   width: 240px;
 `;
-
 const Column1 = styled(motion.div)`
   display: flex;
   flex-direction: column;
@@ -240,7 +235,6 @@ const Column1 = styled(motion.div)`
     }
   }
 `;
-
 const Column2 = styled(motion.div)`
   display: flex;
   flex-direction: column;
@@ -274,7 +268,6 @@ const Column2 = styled(motion.div)`
     }
   }
 `;
-
 const FooterTitle = styled.h4`
   /* font-family: "Bebas Neue", cursive; */
   font-family: var(--font-bebasneue);
@@ -295,7 +288,6 @@ const FooterTitle = styled.h4`
     font-size: 17px;
   }
 `;
-
 const CopyRight = styled(motion.div)`
   position: absolute;
   bottom: -40px;
@@ -314,7 +306,6 @@ const CopyRight = styled(motion.div)`
     left: 30px;
   }
 `;
-
 const CopyRight2 = styled.div`
   display: flex;
 
@@ -327,14 +318,12 @@ const CopyRight2 = styled.div`
     letter-spacing: 1px;
   }
 `;
-
 const MobileContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-end;
 `;
-
 const Div = styled.div`
   display: flex;
   margin-bottom: 40px;
@@ -403,13 +392,11 @@ const Div = styled.div`
     margin-bottom: 20px;
   }
 `;
-
 const MobileSection = styled.div`
   display: flex;
   justify-content: center !important;
   margin: 0 auto;
 `;
-
 const Circle = styled.div`
   display: flex;
   align-items: center;

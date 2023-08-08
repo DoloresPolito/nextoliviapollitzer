@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { styled } from "styled-components";
-import logo from "../../public/assets/logos/cover/logocover.png"
+import logo from "../../public/assets/logos/cover/logocover.png";
 import Image from "next/image";
 
 const Cover = () => {
@@ -26,8 +26,7 @@ const Cover = () => {
       {width >= small ? (
         <>
           <CoverSection width={width}>
-
-              <Image src={logo} alt="logo" className="logo"/>
+            <Image src={logo} alt="logo" className="logo" />
           </CoverSection>
         </>
       ) : (
@@ -74,7 +73,6 @@ const Cover = () => {
 //     top: 15vh !important;
 //   }
 // `;
-
 const CoverSection = styled.div`
   width: 100%;
   height: 100vh !important;
@@ -83,11 +81,9 @@ const CoverSection = styled.div`
   align-items: center;
   color: #5f5f67;
   /* height: auto; */
-
   background-image: url("/assets/pictures/heroextralow.jpg");
   background-size: cover;
   background-position: center;
-
   .logo {
     position: absolute;
     height: 600px;
@@ -123,7 +119,6 @@ const CoverSection = styled.div`
     height: 500px !important;
   }
 `;
-
 const CoverSectionMobile = styled.div`
   width: 100%;
   /* height: 100vh !important; */
@@ -133,9 +128,7 @@ const CoverSectionMobile = styled.div`
   color: #5f5f67;
   background-image: url("/assets/pictures/heroextralowmobile.png");
   background-size: cover;
-
   /* height: calc(100vh - 100px); */
-
   height: 80vh;
 `;
 
