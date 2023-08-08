@@ -1,0 +1,77 @@
+{
+    "one": {
+      "year": 2019,
+      "title": "proyecto Inés Miguens",
+      "subtitle": "Traducción de textos al inglés para concurso de fotografía"
+    },
+    "two": {
+      "year": 2019,
+      "title": "proyecto Casandra",
+      "subtitle": "Escritura de textos para página web"
+    },
+    "three": {
+      "year": 2019,
+      "title": "Viento, de Nicolás Cassese",
+      "subtitle": "Investigación, corrección y edición para el libro de Santiago Lange"
+    },
+    "four": {
+      "year": 2020,
+      "title": "proyecto A",
+      "subtitle": "Escritura de memorias"
+    },
+    "five": {
+      "year": 2020,
+      "title": "proyecto N",
+      "subtitle": "Escritura de memorias"
+    },
+    "six": {
+      "year": 2021,
+      "title": "proyecto B",
+      "subtitle": "Escritura de memorias"
+    },
+    "seven": {
+      "year": 2021,
+      "title": "proyecto P",
+      "subtitle": "Escritura de memorias"
+    },
+    "eight": {
+      "year": 2021,
+      "title": "proyecto G",
+      "subtitle": "Escritura de memorias"
+    },
+    "nine": {
+      "year": 2021,
+      "title": "proyecto Happy Together para Unilever",
+      "subtitle": "Producción de contenido y escritura para el libro Cocineras al rescate"
+    },
+    "ten": {
+      "year": 2021,
+      "title": "proyecto Estudio Ramos",
+      "subtitle": "Escritura de textos para el libro Honest Modernism"
+    },
+    "eleven": {
+      "year": 2022,
+      "title": "proyecto V",
+      "subtitle": "Escritura de memorias"
+    },
+    "twelve": {
+      "year": 2022,
+      "title": "proyecto W",
+      "subtitle": "Escritura de textos para libro de fotos"
+    },
+    "thirteen": {
+      "year": 2022,
+      "title": "proyecto Maderas en el tiempo",
+      "subtitle": "Escritura de textos para la muestra de arte de Sara Santamarina"
+    },
+    "fourteen": {
+      "year": 2022,
+      "title": "proyecto Madariaga",
+      "subtitle": "Producción de contenido y escritura del libro xxx"
+    },
+    "fifteen": {
+      "year": 2023,
+      "title": "proyecto M",
+      "subtitle": "Escritura de textos para libro de fotos"
+    }
+  }
