@@ -88,7 +88,7 @@ const Contact = () => {
                   {sending ? (
                     <RingContainer>
                       {" "}
-                      <Ring color="#A6AA97" size={35} />{" "}
+                      {/* <Ring color="#A6AA97" size={35} />{" "} */}
                     </RingContainer>
                   ) : (
                     <FormContainer>
