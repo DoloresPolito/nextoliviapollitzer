@@ -334,8 +334,9 @@ const FooterTitle = styled.h4`
 `;
 const CopyRight = styled(motion.div)`
   position: absolute;
-  bottom: -40px;
-  left: 90px;
+  left: 170px;
+  margin-top:230px;
+
 
   p {
     font-size: 13px;
@@ -347,7 +348,7 @@ const CopyRight = styled(motion.div)`
   }
 
   @media only screen and (max-width: 1150px) {
-    left: 30px;
+    left: 130px;
   }
 `;
 const CopyRight2 = styled.div`
@@ -452,13 +453,19 @@ const Circle = styled.div`
   border: 1px solid #ffffff;
   margin-left: 10px;
 
+
   img {
     margin-left: 0px;
   }
 
   @media only screen and (max-width: 800px) {
+
+    width: 20px;
+  height: 20px;
+
     img {
       margin-top: 0px;
+
     }
   }
 `;
