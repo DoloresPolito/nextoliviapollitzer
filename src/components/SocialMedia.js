@@ -4,7 +4,9 @@ import { motion } from "framer-motion";
 import mail from "../../public/assets/icons/socialmedia/mail-green.png";
 import whatsapp from "../../public/assets/icons/socialmedia/whatsapp-green.png";
 import instagram from "../../public/assets/icons/socialmedia/instagram-green.png";
-import Image from "/image";
+
+
+import Image from "next/image";
 
 const SocialMedia = () => {
   return (
