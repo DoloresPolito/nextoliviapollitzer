@@ -94,8 +94,8 @@ const WritingSection = styled.div`
 
 const H2 = styled(motion.h2)`
   color: #959985;
-  /* font-family: "Bebas Neue", cursive; */
-  font-family: var(--font-bebasneue);
+  font-family: "Bebas Neue", cursive;
+  /* font-family: var(--font-bebasneue); */
   font-weight: 600;
   letter-spacing: 2px;
   font-size: 50px;
@@ -113,8 +113,8 @@ const BoldLine = styled(motion.div)`
 `;
 
 export const Text1 = styled(motion.p)`
-  /* font-family: "Montserrat", sans-serif; */
-  font-family: var(--font-montserrat);
+  font-family: "Montserrat", sans-serif;
+  /* font-family: var(--font-montserrat); */
   font-size: 15px;
   line-height: 36px;
   letter-spacing: 1.2px;
@@ -134,8 +134,8 @@ export const Text1 = styled(motion.p)`
 `;
 
 export const Text3 = styled(motion.p)`
-  /* font-family: "Bebas Neue", cursive; */
-  font-family: var(--font-bebasneue);
+  font-family: "Bebas Neue", cursive;
+  /* font-family: var(--font-bebasneue); */
   font-size: 20px;
   line-height: 30px;
   letter-spacing: 2px;
@@ -165,8 +165,8 @@ export const Text3Bold = styled(motion.p)`
 `;
 
 const BoxText = styled.p`
-  /* font-family: "Montserrat", sans-serif; */
-  font-family: var(--font-montserrat);
+  font-family: "Montserrat", sans-serif;
+  /* font-family: var(--font-montserrat); */
   font-size: 14px;
   line-height: 24px;
   letter-spacing: 1px;
@@ -189,8 +189,8 @@ const Parrafo = styled.div`
   line-height: 1.5;
   border-radius: 5px;
 
-  /* font-family: "Montserrat", sans-serif; */
-  font-family: var(--font-montserrat);
+  font-family: "Montserrat", sans-serif;
+  /* font-family: var(--font-montserrat); */
   font-size: 15px;
   line-height: 36px;
   letter-spacing: 1.2px;

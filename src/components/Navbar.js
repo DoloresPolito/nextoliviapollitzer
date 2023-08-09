@@ -133,8 +133,8 @@ const NavbarSection = styled.div`
     font-size: 16px;
     line-height: 14px;
 
-    /* font-family: "Bebas Neue", cursive; */
-    font-family: var(--font-bebasneue);
+    font-family: "Bebas Neue", cursive;
+    /* font-family: var(--font-bebasneue); */
     letter-spacing: 2px;
     margin-left: 25px;
   }
@@ -186,8 +186,8 @@ const TabsBox = styled.div`
   text-align: center;
 
   a {
-    /* font-family: "Montserrat"; */
-    font-family: var(--font-montserrat);
+    font-family: "Montserrat";
+    /* font-family: var(--font-montserrat); */
 
     font-weight: 600;
     font-size: 14px;
@@ -231,8 +231,8 @@ const LanguageButton = styled.button`
   font-size: 16px;
   line-height: 14px;
   text-decoration: none;
-  /* font-family: "Bebas Neue", cursive; */
-  font-family: var(--font-bebasneue);
+  font-family: "Bebas Neue", cursive;
+  /* font-family: var(--font-bebasneue); */
   letter-spacing: 2px;
 `;
 

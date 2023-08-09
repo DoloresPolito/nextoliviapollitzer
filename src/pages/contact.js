@@ -203,8 +203,8 @@ const Column1 = styled(motion.div)`
     display: flex;
     justify-content: center;
     color: #6a6f58;
-    /* font-family: "Bebas Neue", cursive; */
-    font-family: var(--font-bebasneue);
+    font-family: "Bebas Neue", cursive;
+    /* font-family: var(--font-bebasneue); */
     font-weight: 600;
     letter-spacing: 2px;
     font-size: 50px;
@@ -279,8 +279,8 @@ const Form2 = styled(motion.form)`
     background-color: #6a6f58;
     border-radius: 20px;
     border: 1px solid #6a6f58;
-    /* font-family: "Bebas Neue", cursive; */
-    font-family: var(--font-bebasneue);
+    font-family: "Bebas Neue", cursive;
+    /* font-family: var(--font-bebasneue); */
     letter-spacing: 1.2px;
 
     :hover {
@@ -324,8 +324,8 @@ const SentSection = styled.div`
     display: flex;
     justify-content: center;
     color: #6a6f58;
-    /* font-family: "Bebas Neue", cursive; */
-    font-family: var(--font-bebasneue);
+    font-family: "Bebas Neue", cursive;
+    /* font-family: var(--font-bebasneue); */
     font-weight: 600;
     letter-spacing: 2px;
     font-size: 50px;

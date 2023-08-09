@@ -190,8 +190,8 @@ const Content = styled.div`
 
   p {
     font-size: 14px;
-    /* font-family: "Montserrat", sans-serif; */
-    font-family: var(--font-montserrat);
+    font-family: "Montserrat", sans-serif;
+    /* font-family: var(--font-montserrat); */
     letter-spacing: 1.1px;
     line-height: 30px;
     color: #ffffff;
@@ -202,13 +202,13 @@ const Content = styled.div`
 `;
 const H2 = styled(motion.h2)`
   color: #ffffff;
-  font-family: var(--font-bebasneue);
-  /* font-family: "Bebas Neue", cursive; */
+  /* font-family: var(--font-bebasneue); */
+  font-family: "Bebas Neue";
   font-weight: 600;
   letter-spacing: 2px;
   font-size: 50px;
   margin-top: 50px;
-  font-family: var(--font-bebasneue);
+  /* font-family: var(--font-bebasneue); */
 `;
 const ServicesContainer = styled.div`
   width: 550px !important;
@@ -245,8 +245,8 @@ const ServicesContainer = styled.div`
   .hoverable p {
     margin: 0;
     text-align: center;
-    /* font-family: "Montserrat", sans-serif; */
-    font-family: var(--font-montserrat);
+    font-family: "Montserrat", sans-serif;
+    /* font-family: var(--font-montserrat); */
     font-size: 14px;
     line-height: 22px;
     letter-spacing: 1px;
@@ -260,8 +260,8 @@ const ServicesContainer = styled.div`
   .hoverable h4 {
     color: #5f5f67;
     font-size: 25px;
-    /* font-family: "Bebas Neue", cursive; */
-    font-family: var(--font-bebasneue);
+    font-family: "Bebas Neue", cursive;
+    /* font-family: var(--font-bebasneue); */
     font-weight: 600;
     letter-spacing: 1.8px;
   }
@@ -332,15 +332,15 @@ const ServiceContainerMobile = styled(motion.div)`
     h4 {
       color: #5f5f67;
       font-size: 25px;
-      /* font-family: "Bebas Neue", cursive; */
-      font-family: var(--font-bebasneue);
+      font-family: "Bebas Neue", cursive;
+      /* font-family: var(--font-bebasneue); */
       font-weight: 600;
       letter-spacing: 1.8px;
     }
 
     p {
-      /* font-family: "Montserrat", sans-serif; */
-      font-family: var(--font-montserrat);
+      font-family: "Montserrat", sans-serif;
+      /* font-family: var(--font-montserrat); */
       font-size: 14px;
       line-height: 22px;
       letter-spacing: 1px;

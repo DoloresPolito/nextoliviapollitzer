@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import mail from "../../public/assets/icons/socialmedia/mail-green.png";
 import whatsapp from "../../public/assets/icons/socialmedia/whatsapp-green.png";
 import instagram from "../../public/assets/icons/socialmedia/instagram-green.png";
-import Image from "next/image";
+import Image from "/image";
 
 const SocialMedia = () => {
   return (
@@ -59,12 +59,12 @@ const Circle = styled.div`
   background-color: transparent;
   margin: 0px 10px 0 0;
   border-radius: 50px;
-  border:1px solid #6a6f58;
+  border: 1px solid #6a6f58;
   margin-left: 10px;
   /* background-color: #f0f0f0; */
   :hover {
-      scale: 1.1;
-    }
+    scale: 1.1;
+  }
 
   img {
     height: 24px;
@@ -72,19 +72,17 @@ const Circle = styled.div`
 
     margin-left: 7px;
     margin-top: 7px;
- 
   }
- 
 
   @media only screen and (max-width: 1045px) {
     height: 40px;
-  width: 40px;
+    width: 40px;
 
     img {
       height: 24px;
-    width: 24px;
-    margin-left: 7px;
-    margin-top: 7px;
+      width: 24px;
+      margin-left: 7px;
+      margin-top: 7px;
     }
   }
 `;
@@ -99,6 +97,6 @@ const SocialMediaContainer = styled(motion.div)`
 
   @media only screen and (max-width: 535px) {
     justify-content: flex-start !important;
-    }
+  }
 `;
 export default SocialMedia;
