@@ -3,7 +3,7 @@ import styled from "styled-components";
 // import { Parallax } from "react-scroll-parallax";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-// import plus from "../../public/assets/icons/services/plus-blue.png";
+import plus from "../../public/assets/icons/services/plus-blue.png";
 import Image from "next/image";
 import Link from "next/link";
 import { useTranslation } from "next-i18next";
@@ -72,10 +72,10 @@ const Services = ({ info }) => {
   }, []);
   return (
     <>
-   
+      {" "}
+      <ServiceSection>
         {width >= 1160 ? (
           <>
-             <ServiceSection>
             <Box>
               <Content>
                 <H2>{translate("title")}</H2>
@@ -83,11 +83,9 @@ const Services = ({ info }) => {
                 <motion.p>{translate("subtitle")}</motion.p>
               </Content>
             </Box>
-            </ServiceSection>
           </>
         ) : (
           <>
-              <ServiceSection>
             <Box>
               <Content>
                 <H2>{translate("title")}</H2>
@@ -95,54 +93,57 @@ const Services = ({ info }) => {
                 <motion.p>{translate("subtitle")}</motion.p>
               </Content>
             </Box>
-            </ServiceSection>
           </>
         )}
 
+        {width >= 1160 ? (
+          <>
+            <ServicesContainer>
+              <div className="hoverable-container">
+                <div className="hoverable">
+                  <h4>{translate("editionTitle")}</h4>
+                  <p>{translate("editionText")}</p>
 
-      {width >= 1160 ? (
-        <>
-          {/* <ServicesContainer>
-            <div className="hoverable-container">
-              <div className="hoverable">
-                <h4>{translate("editionTitle")}</h4>
-                <p>{translate("editionText")}</p>
+                  <div className="overlay">
+                    <Link href="/editing">
+                      <Image src={plus} alt="plus" />
+                    </Link>
+                  </div>
+                </div>
 
-                <div className="overlay">
-               
+                <div className="hoverable">
+                  <h4>{translate("writingTitle")}</h4>
+                  <p>{translate("writingText")}</p>
+
+                  <div className="overlay">
+                    <Link href="/writing">
+                      <Image src={plus} alt="plus" />
+                    </Link>
+                  </div>
                 </div>
               </div>
-
-              <div className="hoverable">
-                <h4>{translate("writingTitle")}</h4>
-                <p>{translate("writingText")}</p>
-
-                <div className="overlay">
-               
+            </ServicesContainer>
+          </>
+        ) : (
+          <>
+            <ServiceContainerMobile>
+              <Link href="/editing" style={{ textDecoration: 'none' }}>
+                <div>
+                  <h4>{translate("editionTitle")}</h4>
+                  <p>{translate("editionText")}</p>
                 </div>
-              </div>
-            </div>
-          </ServicesContainer> */}
-        </>
-      ) : (
-        <>
-        
-        <ServiceContainerMobile>
-            <div>
-            <h4>{translate("editionTitle")}</h4>
-                <p>{translate("editionText")}</p>
-            </div>
-            <MobileLine/>
-
-            <div>
-            <h4>{translate("writingTitle")}</h4>
-                <p>{translate("writingText")}</p>
-            </div>
-
-        </ServiceContainerMobile>
-        
-        </>
-      )}
+              </Link>
+              <MobileLine />
+              <Link href="/writing" style={{ textDecoration: 'none' }}>
+                <div>
+                  <h4>{translate("writingTitle")}</h4>
+                  <p>{translate("writingText")}</p>
+                </div>
+              </Link>
+            </ServiceContainerMobile>
+          </>
+        )}
+      </ServiceSection>
     </>
   );
 };
@@ -215,8 +216,7 @@ const ServicesContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  /* margin-left: 180px; */
-  background-color: red;
+  margin-left: 180px;
   p {
     font-weight: 500;
     color: #5f5f67;
@@ -233,7 +233,7 @@ const ServicesContainer = styled.div`
     position: relative;
     width: 500px;
     height: 190px;
-    /* margin: 5px; */
+    margin: 5px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -255,6 +255,7 @@ const ServicesContainer = styled.div`
     width: 500px;
     text-align: left;
     padding-bottom: 20px;
+    margin-bottom: 10px;
   }
 
   .hoverable h4 {
@@ -275,7 +276,7 @@ const ServicesContainer = styled.div`
     opacity: 0;
     overflow: hidden;
     background-color: transparent;
-    padding: 10px;
+    padding: 5px;
     box-sizing: border-box;
     display: flex;
     justify-content: flex-end;
@@ -290,7 +291,7 @@ const ServicesContainer = styled.div`
 
   .overlay p {
     margin: 0;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
   }
 
   .overlay a {
@@ -304,7 +305,7 @@ const ServicesContainer = styled.div`
   .overlay a img {
     height: 30px;
     width: 30px;
-    margin-bottom: 3px;
+    margin-bottom: 0px;
   }
 `;
 const BoldLine = styled(motion.div)`
@@ -321,6 +322,7 @@ const ServiceContainerMobile = styled(motion.div)`
   flex-direction: column;
   cursor: pointer;
 
+
   div {
     width: 70%;
     height: 150px;
@@ -328,6 +330,8 @@ const ServiceContainerMobile = styled(motion.div)`
     display: flex;
     flex-direction: column;
     margin-top: 30px;
+    
+    
 
     h4 {
       color: #5f5f67;
@@ -336,6 +340,7 @@ const ServiceContainerMobile = styled(motion.div)`
       /* font-family: var(--font-bebasneue); */
       font-weight: 600;
       letter-spacing: 1.8px;
+     
     }
 
     p {
@@ -348,6 +353,7 @@ const ServiceContainerMobile = styled(motion.div)`
       color: #5f5f67;
       text-align: left;
       margin-top: -10px;
+    
 
       @media only screen and (max-width: 700px) {
         font-size: 13px;

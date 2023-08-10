@@ -41,7 +41,7 @@ const Writing2 = () => {
                 <p>      {translate("text")}</p>
               </Parrafo>
 
-              <Link href="/contact">
+              <Link href="/contact" style={{ textDecoration: 'none' }}>
                 <Text3
                   initial={{ x: "-30vw" }}
                   animate={{ x: 0 }}
