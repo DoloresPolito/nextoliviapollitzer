@@ -9,6 +9,7 @@ import Navbar from "../components/Navbar";
 import axios from "axios";
 import { useTranslation } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
+import { ColorRing } from "react-loader-spinner";
 
 const Contact = () => {
   const { t: translate } = useTranslation("contact");
@@ -33,12 +34,18 @@ const Contact = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
+    setSending(true);
     try {
       axios.post("./api/send-email", formData);
-      alert("Correo enviado correctamente.");
+      // alert("Correo enviado correctamente.");
+      setSending(false);
+      setMessageSent(true);
       // setMessageSent(true);
     } catch (error) {
       alert("Error al enviar el correo.");
+      setSending(false);
+    
+      // setMessageError(true);
       console.error(error);
     }
   };
@@ -86,10 +93,25 @@ const Contact = () => {
               >
                 <>
                   {sending ? (
-                    <RingContainer>
-                      {" "}
-                      {/* <Ring color="#A6AA97" size={35} />{" "} */}
-                    </RingContainer>
+                  <RingContainer>
+                  {/* <div> */}
+                    <ColorRing
+                      visible={true}
+                      height="80"
+                      width="80"
+                      ariaLabel="blocks-loading"
+                      wrapperStyle={{}}
+                      wrapperClass="blocks-wrapper"
+                      colors={[
+                        "#e15b64",
+                        "#f47e60",
+                        "#f8b26a",
+                        "#abbd81",
+                        "#849b87",
+                      ]}
+                    />
+                  {/* </div> */}
+                </RingContainer>
                   ) : (
                     <FormContainer>
                       <Form2
@@ -310,7 +332,22 @@ const SentSection = styled.div`
   width: 80%;
   margin-top: -30px;
 
+
+  @media only screen and (max-width: 700px) {
+
+    }
+
+    @media only screen and (max-width: 440px) {
+
+      justify-content: flex-start;
+      height:auto;
+    margin-bottom: 40px;
+    }
+
   h2 {
+ 
+    font-family: "Montserrat";
+    /* font-family: "Bebas Neue", cursive; */
     @media only screen and (max-width: 700px) {
       margin-top: 80px;
     }
@@ -325,6 +362,7 @@ const SentSection = styled.div`
     justify-content: center;
     color: #6a6f58;
     font-family: "Bebas Neue", cursive;
+    /* font-family: "Montserrat"; */
     /* font-family: var(--font-bebasneue); */
     font-weight: 600;
     letter-spacing: 2px;
@@ -337,6 +375,7 @@ const SentSection = styled.div`
     @media only screen and (max-width: 700px) {
       font-size: 40px;
       width: 400px;
+  
     }
 
     @media only screen and (max-width: 440px) {

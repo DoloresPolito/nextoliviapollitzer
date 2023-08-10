@@ -2,22 +2,21 @@ import React, { useState, useEffect } from "react";
 import Hamburger from "hamburger-react";
 import styled from "styled-components";
 import Link from "next/link";
-// import Image from "next/image";
-
+import Image from "next/image";
 import Menu from "./Menu";
-
 import { useRouter } from "next/router";
 import { useTranslation } from "next-i18next";
 
+import logo from "../../public/assets/logos/navbar/logo.png"
+import instagram from "../../public/assets/icons/socialmedia/instagram-blue.png"
+
 const Navbar = () => {
   const [width, setWidth] = useState(null);
-  const [view, setView] = useState();
-  
   const { locale, locales, push } = useRouter();
   const { t: translate } = useTranslation("navbar");
   const handleClick = (l) => () => {
-      push("/", undefined, { locale: l });
-    };
+    push("/", undefined, { locale: l });
+  };
 
   useEffect(() => {
     const handleResize = () => {
@@ -35,24 +34,30 @@ const Navbar = () => {
   const [isOpen, setOpen] = useState(false);
   const medium = 1045;
 
-
-  
-
-
-
   return (
     <>
       <NavbarSection mode={medium >= 1040 ? "absolute" : "fixed"}>
         <NavbarContainer>
+        <Link href="/">
+          <LogoContainer>
+            <Image src={logo} alt="logo"  />
+          </LogoContainer>
+        </Link>
           {width >= medium ? (
             <>
-       
-
-       <TabsBox mode='large'>
+              <TabsBox mode="large">
                 <Link href="/">{translate("cero")}</Link>
                 <Link href="/work"> {translate("one")}</Link>
-                <Link href="/">{translate("two")}</Link>
+                <Link href="/bio">{translate("two")}</Link>
                 <Link href="/contact"> {translate("three")}</Link>
+                <Circle>
+                <a
+                  href="https://www.instagram.com/olipollitzer/"
+                  target="_blank"
+                >
+                  <Image src={instagram} className="social" alt="instagram" />
+                </a>
+              </Circle>
               </TabsBox>
               <section>
                 {locales.map((l) => (
@@ -79,7 +84,7 @@ const Navbar = () => {
 const LogoContainer = styled.div`
   position: absolute;
   left: 0px;
-  top: 0px;
+  top: 10px;
   height: 280px;
   width: 160px;
 
@@ -110,7 +115,7 @@ const InstaContainer = styled.div`
 `;
 const NavbarSection = styled.div`
   z-index: 100;
-  background-color: #EAEAEA;
+  background-color: #eaeaea;
 
   top: 0;
   width: 100%;

@@ -9,7 +9,6 @@ export default async function handler(req, res) {
   const { name, email, message, date, place, phone, quantity } = req.body;
 
   try {
-    // Configurar el transporte de nodemailer con tus credenciales SMTP
     const transporter = nodemailer.createTransport({
       host: process.env.SMTP_HOST,
       port: process.env.SMTP_PORT,
@@ -19,10 +18,9 @@ export default async function handler(req, res) {
       },
     });
 
-    // Configurar el mensaje de correo
     const mailOptions = {
       from: email,
-      to: "dolores.polito@gmail.com", // Cambia esto al correo del destinatario
+      to: "dolores.polito@gmail.com",
       subject: `Mensaje de ${name}`,
       text: `
       Hola Olivia Pollitzer.
@@ -35,7 +33,6 @@ export default async function handler(req, res) {
       Saludos.`,
     };
 
-    // Enviar el correo
     await transporter.sendMail(mailOptions);
 
     return res.status(200).end();

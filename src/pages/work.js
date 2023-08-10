@@ -3,9 +3,9 @@ import styled from "styled-components";
 import { useTranslation } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import Navbar from "../components/Navbar";
+import Footer from "../sections/Footer";
 
 const Work = () => {
-
   const { t: translate } = useTranslation("work");
 
   const container = {
@@ -32,7 +32,6 @@ const Work = () => {
           exit={{ opacity: 0 }}
           transition={{ duration: 0.5, ease: "easeOut" }}
         >
-    
           <Navbar />
 
           <WorkSection>
@@ -76,7 +75,7 @@ const Work = () => {
                 </WorkLi>
               </motion.li>
 
-            <motion.li variants={item}>
+              <motion.li variants={item}>
                 <WorkLi>
                   <WorkDate>
                     <p>{translate("four.year")}</p>
@@ -108,11 +107,110 @@ const Work = () => {
                     <More>{translate("six.subtitle")}</More>
                   </Content>
                 </WorkLi>
-              </motion.li> 
+              </motion.li>
+              <motion.li variants={item}>
+                <WorkLi>
+                  <WorkDate>
+                    <p>{translate("seven.year")}</p>
+                  </WorkDate>
+                  <Content>
+                    <WorkTitle>{translate("seven.title")}</WorkTitle>
+                    <More>{translate("seven.subtitle")}</More>
+                  </Content>
+                </WorkLi>
+              </motion.li>
+              <motion.li variants={item}>
+                <WorkLi>
+                  <WorkDate>
+                    <p>{translate("eight.year")}</p>
+                  </WorkDate>
+                  <Content>
+                    <WorkTitle>{translate("eight.title")}</WorkTitle>
+                    <More>{translate("eight.subtitle")}</More>
+                  </Content>
+                </WorkLi>
+              </motion.li>
+              <motion.li variants={item}>
+                <WorkLi>
+                  <WorkDate>
+                    <p>{translate("nine.year")}</p>
+                  </WorkDate>
+                  <Content>
+                    <WorkTitle>{translate("nine.title")}</WorkTitle>
+                    <More>{translate("nine.subtitle")}</More>
+                  </Content>
+                </WorkLi>
+              </motion.li>
+              <motion.li variants={item}>
+                <WorkLi>
+                  <WorkDate>
+                    <p>{translate("ten.year")}</p>
+                  </WorkDate>
+                  <Content>
+                    <WorkTitle>{translate("ten.title")}</WorkTitle>
+                    <More>{translate("ten.subtitle")}</More>
+                  </Content>
+                </WorkLi>
+              </motion.li>
+              <motion.li variants={item}>
+                <WorkLi>
+                  <WorkDate>
+                    <p>{translate("eleven.year")}</p>
+                  </WorkDate>
+                  <Content>
+                    <WorkTitle>{translate("eleven.title")}</WorkTitle>
+                    <More>{translate("eleven.subtitle")}</More>
+                  </Content>
+                </WorkLi>
+              </motion.li>
+              <motion.li variants={item}>
+                <WorkLi>
+                  <WorkDate>
+                    <p>{translate("twelve.year")}</p>
+                  </WorkDate>
+                  <Content>
+                    <WorkTitle>{translate("twelve.title")}</WorkTitle>
+                    <More>{translate("twelve.subtitle")}</More>
+                  </Content>
+                </WorkLi>
+              </motion.li>
+              <motion.li variants={item}>
+                <WorkLi>
+                  <WorkDate>
+                    <p>{translate("thirteen.year")}</p>
+                  </WorkDate>
+                  <Content>
+                    <WorkTitle>{translate("thirteen.title")}</WorkTitle>
+                    <More>{translate("thirteen.subtitle")}</More>
+                  </Content>
+                </WorkLi>
+              </motion.li>
+              <motion.li variants={item}>
+                <WorkLi>
+                  <WorkDate>
+                    <p>{translate("fourteen.year")}</p>
+                  </WorkDate>
+                  <Content>
+                    <WorkTitle>{translate("fourteen.title")}</WorkTitle>
+                    <More>{translate("fourteen.subtitle")}</More>
+                  </Content>
+                </WorkLi>
+              </motion.li>
+              <motion.li variants={item}>
+                <WorkLi>
+                  <WorkDate>
+                    <p>{translate("fifteen.year")}</p>
+                  </WorkDate>
+                  <Content>
+                    <WorkTitle>{translate("fifteen.title")}</WorkTitle>
+                    <More>{translate("fifteen.subtitle")}</More>
+                  </Content>
+                </WorkLi>
+              </motion.li>
             </motion.ul>
           </WorkSection>
         </motion.div>
-
+        <Footer />
       </Page>
     </>
   );

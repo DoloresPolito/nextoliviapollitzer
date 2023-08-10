@@ -98,14 +98,15 @@ const Footer = () => {
                 <Link href="/">
                   <li>{translate("services")}</li>
                 </Link>
-                <Link href="/">
+                <Link href="/work">
                   <li>{translate("work")}</li>
+                </Link>
+        
+                <Link href="/bio">
+                  <li>{translate("about")}</li>
                 </Link>
                 <Link href="/contact">
                   <li>{translate("contact")}</li>
-                </Link>
-                <Link href="/work">
-                  <li>{translate("about")}</li>
                 </Link>
               </ul>
             </Column2>
@@ -152,14 +153,15 @@ const Footer = () => {
                     <Link href="/">
                       <li>{translate("services")}</li>
                     </Link>
-                    <Link href="/">
+                    <Link href="/work">
                       <li>{translate("work")}</li>
+                    </Link>
+               
+                    <Link href="/bio">
+                      <li>{translate("about")}</li>
                     </Link>
                     <Link href="/contact">
                       <li>{translate("contact")}</li>
-                    </Link>
-                    <Link href="/work">
-                      <li>{translate("about")}</li>
                     </Link>
                   </ul>
                 </Div>
