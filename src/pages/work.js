@@ -121,7 +121,6 @@ const Work = () => {
 const Page = styled.div`
   height: 100%;
   width: 100%;
-  background-color: red;
 `;
 const WorkSection = styled.div`
   width: 100%;
