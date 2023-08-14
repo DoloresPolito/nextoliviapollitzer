@@ -1,9 +1,16 @@
 {
-    "title": "Our Services",
-    "subtitle": "We are dedicated to words. We observe texts to adjust their gestures and nuances and we also build new texts from the ground up. We invite you to learn about our editorial services. ",
-    "editionTitle": "Editing",
-    "editionText": "If you have written a text and want a professional reading (beta reader) and an editor’s report or need any sort of editing. ",
-    "writingTitle": "Writing",
-    "writingText": "If you have ideas for a text but do not know how to express them or if you do not have time to write. ",
-    "button": "View more"
-  }
+  "title": "Our Services",
+  "subtitle": "We are dedicated to words. We observe texts to adjust their gestures and nuances and we also build new texts from the ground up. We invite you to learn about our editorial services. ",
+  "editionTitle": "Editing",
+  "editionText": "If you have written a text and want a professional reading (beta reader) and an editor’s report or need any sort of editing. ",
+  "writingTitle": "Writing",
+  "writingText": "If you have ideas for a text but do not know how to express them or if you do not have time to write. ",
+  "button": "View more",
+  "replacedValue": "some replaced value",
+  "anotherReplacedValue": "another replaced value",
+  "sentence": "Sentence with <strong>DOLORES</strong>, and <i>polito</i>."
+
+
+
+
+}

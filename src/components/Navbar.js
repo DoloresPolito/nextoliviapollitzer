@@ -84,7 +84,7 @@ const Navbar = () => {
 const LogoContainer = styled.div`
   position: absolute;
   left: 0px;
-  top: 10px;
+  top: 6px;
   height: 280px;
   width: 160px;
 

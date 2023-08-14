@@ -101,3 +101,8 @@ a {
     color-scheme: dark;
   }
 }
+
+
+.bold {
+  font-weight: bold;
+}

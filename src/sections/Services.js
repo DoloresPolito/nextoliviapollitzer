@@ -6,9 +6,10 @@ import { useInView } from "react-intersection-observer";
 import plus from "../../public/assets/icons/services/plus-blue.png";
 import Image from "next/image";
 import Link from "next/link";
-import { useTranslation } from "next-i18next";
+import { useTranslation, Trans } from "next-i18next";
 
-const Services = ({ info }) => {
+
+const Services = () => {
   const animation1 = useAnimation();
   const animation2 = useAnimation();
   const animation3 = useAnimation();
@@ -81,6 +82,20 @@ const Services = ({ info }) => {
                 <H2>{translate("title")}</H2>
                 <BoldLine />
                 <motion.p>{translate("subtitle")}</motion.p>
+
+                
+                {/* <div>
+                <Trans>
+                  {translate("sentence", {
+                    replacedValue: translate("replacedValue"),
+                    anotherReplacedValue: translate("anotherReplacedValue"),
+                  })}
+                </Trans>
+                </div> */}
+
+
+
+
               </Content>
             </Box>
           </>
@@ -127,14 +142,14 @@ const Services = ({ info }) => {
         ) : (
           <>
             <ServiceContainerMobile>
-              <Link href="/editing" style={{ textDecoration: 'none' }}>
+              <Link href="/editing" style={{ textDecoration: "none" }}>
                 <div>
                   <h4>{translate("editionTitle")}</h4>
                   <p>{translate("editionText")}</p>
                 </div>
               </Link>
               <MobileLine />
-              <Link href="/writing" style={{ textDecoration: 'none' }}>
+              <Link href="/writing" style={{ textDecoration: "none" }}>
                 <div>
                   <h4>{translate("writingTitle")}</h4>
                   <p>{translate("writingText")}</p>
@@ -322,7 +337,6 @@ const ServiceContainerMobile = styled(motion.div)`
   flex-direction: column;
   cursor: pointer;
 
-
   div {
     width: 70%;
     height: 150px;
@@ -330,8 +344,6 @@ const ServiceContainerMobile = styled(motion.div)`
     display: flex;
     flex-direction: column;
     margin-top: 30px;
-    
-    
 
     h4 {
       color: #5f5f67;
@@ -340,7 +352,6 @@ const ServiceContainerMobile = styled(motion.div)`
       /* font-family: var(--font-bebasneue); */
       font-weight: 600;
       letter-spacing: 1.8px;
-     
     }
 
     p {
@@ -353,7 +364,6 @@ const ServiceContainerMobile = styled(motion.div)`
       color: #5f5f67;
       text-align: left;
       margin-top: -10px;
-    
 
       @media only screen and (max-width: 700px) {
         font-size: 13px;

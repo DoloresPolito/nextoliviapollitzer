@@ -1,9 +1,13 @@
- {
-    "title": "Servicios",
-    "subtitle": "Nos dedicamos a las palabras. Observamos textos para ajustar sus gestos y matices y también construimos, desde el principio, textos nuevos. Te invitamos a conocer nuestros servicios editoriales.",
-    "editionTitle": "Edición",
-    "editionText": "Si escribiste un texto y querés recibir una lectura profesional (lector cero) y un informe literario o necesitás una corrección de estilo.",
-    "writingTitle": "Escritura",
-    "writingText": "Si tenés las ideas para un texto pero no sabés cómo expresarlas o no tenés tiempo para escribir. ",
-    "button": "Ver más"
-  }
+{
+  "title": "Servicios",
+  "subtitle": "Nos dedicamos a las palabras. Observamos textos para ajustar sus gestos y matices y también construimos, desde el principio, textos nuevos. Te invitamos a conocer nuestros servicios editoriales.",
+  "editionTitle": "Edición",
+  "editionText": "Si escribiste un texto y querés recibir una lectura profesional (lector cero) y un informe literario o necesitás una corrección de estilo.",
+  "writingTitle": "Escritura",
+  "writingText": "Si tenés las ideas para un texto pero no sabés cómo expresarlas o no tenés tiempo para escribir. ",
+  "button": "Ver más",
+
+  "replacedValue": "some replaced value",
+  "anotherReplacedValue": "another replaced value",
+  "sentence": "oracion con  <strong>INES</strong>, y <i>polito</i>."
+}
