@@ -44,7 +44,7 @@ const Contact = () => {
     } catch (error) {
       alert("Error al enviar el correo.");
       setSending(false);
-    
+
       // setMessageError(true);
       console.error(error);
     }
@@ -93,25 +93,25 @@ const Contact = () => {
               >
                 <>
                   {sending ? (
-                  <RingContainer>
-                  {/* <div> */}
-                    <ColorRing
-                      visible={true}
-                      height="80"
-                      width="80"
-                      ariaLabel="blocks-loading"
-                      wrapperStyle={{}}
-                      wrapperClass="blocks-wrapper"
-                      colors={[
-                        "#e15b64",
-                        "#f47e60",
-                        "#f8b26a",
-                        "#abbd81",
-                        "#849b87",
-                      ]}
-                    />
-                  {/* </div> */}
-                </RingContainer>
+                    <RingContainer>
+                      {/* <div> */}
+                      <ColorRing
+                        visible={true}
+                        height="80"
+                        width="80"
+                        ariaLabel="blocks-loading"
+                        wrapperStyle={{}}
+                        wrapperClass="blocks-wrapper"
+                        colors={[
+                          "#e15b64",
+                          "#f47e60",
+                          "#f8b26a",
+                          "#abbd81",
+                          "#849b87",
+                        ]}
+                      />
+                      {/* </div> */}
+                    </RingContainer>
                   ) : (
                     <FormContainer>
                       <Form2
@@ -268,7 +268,7 @@ const FormContainer = styled.div`
   }
 
   @media only screen and (max-width: 535px) {
-    width: 80%;
+    width: 90%;
   }
 `;
 
@@ -321,6 +321,22 @@ const Input2 = styled.input`
   border-radius: 20px;
   border: 1px solid #6a6f58;
   margin-bottom: 12px;
+
+  @media only screen and (max-width: 700px) {
+    width: 400px;
+  }
+
+  @media only screen and (max-width: 530px) {
+    width: 340px;
+  }
+
+  @media only screen and (max-width: 430px) {
+    width: 280px;
+  }
+
+  @media only screen and (max-width: 365px) {
+    width: 250px;
+  }
 `;
 
 const SentSection = styled.div`
@@ -332,20 +348,16 @@ const SentSection = styled.div`
   width: 80%;
   margin-top: -30px;
 
-
   @media only screen and (max-width: 700px) {
+  }
 
-    }
-
-    @media only screen and (max-width: 440px) {
-
-      justify-content: flex-start;
-      height:auto;
+  @media only screen and (max-width: 440px) {
+    justify-content: flex-start;
+    height: auto;
     margin-bottom: 40px;
-    }
+  }
 
   h2 {
- 
     font-family: "Montserrat";
     /* font-family: "Bebas Neue", cursive; */
     @media only screen and (max-width: 700px) {
@@ -375,7 +387,6 @@ const SentSection = styled.div`
     @media only screen and (max-width: 700px) {
       font-size: 40px;
       width: 400px;
-  
     }
 
     @media only screen and (max-width: 440px) {
