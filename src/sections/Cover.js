@@ -25,13 +25,13 @@ const Cover = () => {
     <>
       {width >= small ? (
         <>
-          <CoverSection width={width}>
+          <CoverSection >
             <Image src={logo} alt="logo" className="logo" />
           </CoverSection>
         </>
       ) : (
         <>
-          <CoverSectionMobile width={width}></CoverSectionMobile>
+          <CoverSectionMobile ></CoverSectionMobile>
         </>
       )}
     </>
@@ -81,7 +81,7 @@ const CoverSection = styled.div`
   align-items: center;
   color: #5f5f67;
   /* height: auto; */
-  background-image: url("/assets/pictures/heroextralow.jpg");
+  background-image: url("/assets/pictures/heroextralow.webp");
   background-size: cover;
   background-position: center;
   .logo {
@@ -126,7 +126,7 @@ const CoverSectionMobile = styled.div`
   flex-direction: column;
   align-items: center;
   color: #5f5f67;
-  background-image: url("/assets/pictures/heroextralowmobile.png");
+  background-image: url("/assets/pictures/heroextralowmobile.webp");
   background-size: cover;
   /* height: calc(100vh - 100px); */
   height: 80vh;
