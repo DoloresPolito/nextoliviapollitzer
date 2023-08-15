@@ -7,8 +7,8 @@ import Menu from "./Menu";
 import { useRouter } from "next/router";
 import { useTranslation } from "next-i18next";
 
-import logo from "../../public/assets/logos/navbar/logo.png"
-import instagram from "../../public/assets/icons/socialmedia/instagram-blue.png"
+import logo from "../../public/assets/logos/navbar/logo.png";
+import instagram from "../../public/assets/icons/socialmedia/instagram-blue.png";
 
 const Navbar = () => {
   const [width, setWidth] = useState(null);
@@ -34,30 +34,45 @@ const Navbar = () => {
   const [isOpen, setOpen] = useState(false);
   const medium = 1045;
 
+  const sublinksData = [
+    { text: "EDICION", url: "/editing" },
+    { text: "ESCRITURA", url: "/writing" },
+  ];
+
   return (
     <>
       <NavbarSection mode={medium >= 1040 ? "absolute" : "fixed"}>
         <NavbarContainer>
-        <Link href="/">
-          <LogoContainer>
-            <Image src={logo} alt="logo"  />
-          </LogoContainer>
-        </Link>
+          <Link href="/">
+            <LogoContainer>
+              <Image src={logo} alt="logo" />
+            </LogoContainer>
+          </Link>
           {width >= medium ? (
             <>
               <TabsBox mode="large">
-                <Link href="/">{translate("cero")}</Link>
+                <div className="sub">
+                  <Link href="/">{translate("cero")}</Link>
+                  <a data-sublinks>
+                    {sublinksData.map((sublink) => (
+                      <Link key={sublink.url} href={sublink.url}>
+                        {sublink.text}
+                      </Link>
+                    ))}
+                  </a>
+                </div>
+
                 <Link href="/work"> {translate("one")}</Link>
                 <Link href="/bio">{translate("two")}</Link>
                 <Link href="/contact"> {translate("three")}</Link>
                 <Circle>
-                <a
-                  href="https://www.instagram.com/olipollitzer/"
-                  target="_blank"
-                >
-                  <Image src={instagram} className="social" alt="instagram" />
-                </a>
-              </Circle>
+                  <a
+                    href="https://www.instagram.com/olipollitzer/"
+                    target="_blank"
+                  >
+                    <Image src={instagram} className="social" alt="instagram" />
+                  </a>
+                </Circle>
               </TabsBox>
               <section>
                 {locales.map((l) => (
@@ -189,6 +204,7 @@ const TabsBox = styled.div`
   display: ${(props) => (props.mode === "large" ? "flex" : "block")};
   align-items: center;
   text-align: center;
+  position: relative;
 
   a {
     font-family: "Montserrat";
@@ -209,6 +225,31 @@ const TabsBox = styled.div`
     padding: 5px;
     margin: 0 35px 0 0;
   }
+
+  /* ... your existing styles ... */
+
+  /* Needed for positioning the sublinks */
+
+  div {
+    &:hover a[data-sublinks] {
+      display: block;
+    }
+  }
+
+  /* Hide sublinks by default */
+  a[data-sublinks] {
+    display: none;
+    position: absolute;
+    top: 100%; /* Position sublinks below the main link */
+    left: 0;
+    background-color: #eaeaea;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 10; /* Ensure sublinks appear above other content */
+    height: 80px;
+    width: 95px;
+  }
+
+
 `;
 const Circle = styled.div`
   display: flex;
