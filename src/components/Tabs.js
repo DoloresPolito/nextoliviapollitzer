@@ -4,7 +4,6 @@ import Link from "next/link";
 import { useTranslation } from "next-i18next";
 
 const Tabs = ({ mode, open, setOpen }) => {
-
   const { t: translate } = useTranslation("navbar");
 
   const handleClose = () => {
@@ -14,10 +13,23 @@ const Tabs = ({ mode, open, setOpen }) => {
   return (
     <>
       <TabsBox>
-        <Link href="/" onClick={() => handleClose()}>{translate("cero")}</Link>
-        <Link href="/work" onClick={() => handleClose()}>{translate("one")}</Link>
-        <Link href="/bio" onClick={() => handleClose()}>{translate("two")}</Link>
-        <Link href="/contact" onClick={() => handleClose()}>{translate("three")}</Link>
+        <Link href="/">{translate("cero")}</Link>
+
+        <div>
+          <Link href="/editing">{translate("sublink1")}</Link>
+
+          <Link href="/writing">{translate("sublink2")}</Link>
+        </div>
+
+        <Link href="/work" onClick={() => handleClose()}>
+          {translate("one")}
+        </Link>
+        <Link href="/bio" onClick={() => handleClose()}>
+          {translate("two")}
+        </Link>
+        <Link href="/contact" onClick={() => handleClose()}>
+          {translate("three")}
+        </Link>
       </TabsBox>
     </>
   );
@@ -27,6 +39,7 @@ const TabsBox = styled.div`
   display: ${(props) => (props.mode === "large" ? "flex" : "block")};
   z-index: 5;
   margin-top: 40px;
+  /* position: relative; */
 
   a {
     font-family: "Montserrat";
@@ -49,6 +62,15 @@ const TabsBox = styled.div`
     &:hover,
     &:active,
     &:focus {
+    }
+  }
+
+  div {
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+    a {
+      height: 15px;
     }
   }
 `;

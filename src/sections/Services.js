@@ -8,7 +8,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { useTranslation, Trans } from "next-i18next";
 
-
 const Services = () => {
   const animation1 = useAnimation();
   const animation2 = useAnimation();
@@ -83,7 +82,6 @@ const Services = () => {
                 <BoldLine />
                 <motion.p>{translate("subtitle")}</motion.p>
 
-                
                 {/* <div>
                 <Trans>
                   {translate("sentence", {
@@ -92,10 +90,6 @@ const Services = () => {
                   })}
                 </Trans>
                 </div> */}
-
-
-
-
               </Content>
             </Box>
           </>

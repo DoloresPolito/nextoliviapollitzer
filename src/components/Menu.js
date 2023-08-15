@@ -34,7 +34,7 @@ const Menu = ({ open, setOpen }) => {
 export const StyledMenu = styled.nav`
 section {
   position: absolute;
-  margin-top: 320px;
+  margin-top: 360px;
   left: 11px;
   align-self: center;
   font-size: 14px;
@@ -42,7 +42,7 @@ section {
 display: flex;
 flex-direction: column;
 justify-content: flex-start;
-background-color: #EAE9E5;
+background-color: white;
 text-align: left;
 padding: 150px 100px 30px 30px;
 position: fixed;

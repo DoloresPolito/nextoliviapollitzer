@@ -34,10 +34,7 @@ const Navbar = () => {
   const [isOpen, setOpen] = useState(false);
   const medium = 1045;
 
-  const sublinksData = [
-    { text: "EDICION", url: "/editing" },
-    { text: "ESCRITURA", url: "/writing" },
-  ];
+
 
   return (
     <>
@@ -54,11 +51,9 @@ const Navbar = () => {
                 <div className="sub">
                   <Link href="/">{translate("cero")}</Link>
                   <a data-sublinks>
-                    {sublinksData.map((sublink) => (
-                      <Link key={sublink.url} href={sublink.url}>
-                        {sublink.text}
-                      </Link>
-                    ))}
+                    <Link href="/editing">{translate("sublink1")}</Link>
+
+                    <Link href="/writing">{translate("sublink2")}</Link>
                   </a>
                 </div>
 
@@ -130,7 +125,7 @@ const InstaContainer = styled.div`
 `;
 const NavbarSection = styled.div`
   z-index: 100;
-  background-color: #eaeaea;
+  background-color: white;
 
   top: 0;
   width: 100%;
@@ -242,14 +237,12 @@ const TabsBox = styled.div`
     position: absolute;
     top: 100%; /* Position sublinks below the main link */
     left: 0;
-    background-color: #eaeaea;
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    background-color: white;
+    /* box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); */
     z-index: 10; /* Ensure sublinks appear above other content */
     height: 80px;
     width: 95px;
   }
-
-
 `;
 const Circle = styled.div`
   display: flex;
