@@ -94,7 +94,7 @@ const Navbar = () => {
 const LogoContainer = styled.div`
   position: absolute;
   left: 0px;
-  top: 6px;
+  top: 0px;
   height: 280px;
   width: 160px;
 
@@ -125,8 +125,7 @@ const InstaContainer = styled.div`
 `;
 const NavbarSection = styled.div`
   z-index: 100;
-  background-color: white;
-
+  /* background-color: white; */
   top: 0;
   width: 100%;
   height: 80px;

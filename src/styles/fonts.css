@@ -1,0 +1,57 @@
+@font-face {
+    font-family: 'CirkLight';
+    src: url('/fonts/PPCirka/PPCirka-Light.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+
+  @font-face {
+    font-family: 'CirkBold';
+    src: url('/fonts/PPCirka/PPCirka-Bold.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+
+  @font-face {
+    font-family: 'CirkVariable';
+    src: url('/fonts/PPCirka/PPCirka-Variable.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+
+  @font-face {
+    font-family: 'EditorialMedium';
+    src: url('/fonts/PP Editorial Sans/otf/PPEditorialSans-Medium.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'EditorialUltralight';
+    src: url('/fonts/PP Editorial Sans/otf/PPEditorialSans-Ultralight.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+
+
+
+
+  @font-face {
+    font-family: 'NeueMedium';
+    src: url('/fonts/PP Neue Montreal/OTF/PPNeueMontreal-Medium.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'NeueThin';
+    src: url('/fonts/PP Neue Montreal/OTF/PPNeueMontreal-Thin.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  

@@ -1,6 +1,14 @@
 import { createGlobalStyle } from 'styled-components'
 
+
+
+
+
 const GlobalStyles = createGlobalStyle`
+
+
+
+
   body {
     margin: 0;
     font-family: 'DMSans', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -24,6 +32,9 @@ const GlobalStyles = createGlobalStyle`
     transition: all 0.25s ease-in-out;
     color: inherit;
   }
+
+
+
   
 `
 

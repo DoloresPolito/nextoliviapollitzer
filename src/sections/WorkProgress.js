@@ -1,13 +1,14 @@
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
-import text from "../../public/assets/icons/workprogress/edit-green.png";
-import dialogo from "../../public/assets/icons/workprogress/chat-green.png";
-import book from "../../public/assets/icons/workprogress/openbook-green.png";
-import computer from "../../public/assets/icons/workprogress/computer-green.png";
+// import text from "../../public/assets/icons/workprogress/edit-green.png";
+// import dialogo from "../../public/assets/icons/workprogress/chat-green.png";
+// import book from "../../public/assets/icons/workprogress/openbook-green.png";
+// import computer from "../../public/assets/icons/workprogress/computer-green.png";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import Image from "next/image";
+// import Image from "next/image";
 import { useTranslation } from "next-i18next";
+import AnimatedDiv from "@/newcomponents/AnimatedDiv";
 
 const WorkProgress = () => {
   const animation = useAnimation();
@@ -35,13 +36,18 @@ const WorkProgress = () => {
 
   return (
     <>
-      <WorkProgressSection ref={ref}>
-        <Content animate={shouldAnimate ? animation : {}}>
+      <WorkProgressSection 
+      // ref={ref}
+      >
+<AnimatedDiv>
+        <Content 
+        // animate={shouldAnimate ? animation : {}}
+        >
           <div>
-            <Icons>
+            {/* <Icons>
 
               <Image src={dialogo} alt='chat'/>
-            </Icons>
+            </Icons> */}
             <Numbers>
               <p>1.</p>
             </Numbers>
@@ -53,9 +59,9 @@ const WorkProgress = () => {
             </Texts>
           </div>
           <div>
-            <Icons>
+            {/* <Icons>
             <Image src={computer} alt='computer'/>
-            </Icons>
+            </Icons> */}
             <Numbers>
               <p>2.</p>
             </Numbers>
@@ -67,9 +73,9 @@ const WorkProgress = () => {
             </Texts>
           </div>
           <div>
-            <Icons>
+            {/* <Icons>
             <Image src={text} alt='text'/>
-            </Icons>
+            </Icons> */}
             <Numbers>
               <p>3.</p>
             </Numbers>
@@ -81,9 +87,9 @@ const WorkProgress = () => {
             </Texts>
           </div>
           <div>
-            <Icons>
+            {/* <Icons>
             <Image src={book} alt='book'/>
-            </Icons>
+            </Icons> */}
             <Numbers>
               <p>4.</p>
             </Numbers>
@@ -95,6 +101,7 @@ const WorkProgress = () => {
             </Texts>
           </div>
         </Content>
+        </AnimatedDiv>
       </WorkProgressSection>
     </>
   );
@@ -128,7 +135,7 @@ const Content = styled(motion.div)`
   height: 70%;
   align-items: center;
   justify-content: center;
-
+  /* border: 1px solid grey; */
   @media only screen and (max-width: 1160px) {
   }
 
@@ -138,6 +145,7 @@ const Content = styled(motion.div)`
     justify-content: center;
     align-items: center;
     padding: 10px;
+
     :hover {
       scale: 1.05;
       /* background-color: #f9f9f9 !important; */
@@ -155,21 +163,21 @@ const Content = styled(motion.div)`
     }
   }
 `;
-const Icons = styled.div`
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  width: 80%;
-  img {
-    height: 50px;
-    width: 50px;
+// const Icons = styled.div`
+//   display: flex;
+//   flex-direction: row;
+//   justify-content: space-around;
+//   width: 80%;
+//   img {
+//     height: 50px;
+//     width: 50px;
 
-    @media only screen and (max-width: 1160px) {
-      height: 45px;
-      width: 45px;
-    }
-  }
-`;
+//     @media only screen and (max-width: 1160px) {
+//       height: 45px;
+//       width: 45px;
+//     }
+//   }
+// `;
 const Titles = styled.div`
   display: flex;
   flex-direction: row;
@@ -185,13 +193,14 @@ const Titles = styled.div`
 
   p {
     font-family: "Bebas Neue", cursive;
+    font-family: 'EditorialMedium', sans-serif;
     /* font-family: var(--font-bebasneue); */
     font-size: 18px;
     line-height: 22px;
     letter-spacing: 2px;
     font-weight: 600;
     color: #5f5f67;
-    text-align: center;
+    /* text-align: center; */
     width: 250px;
     @media only screen and (max-width: 1160px) {
       /* font-size: 16px; */
@@ -215,12 +224,12 @@ const Numbers = styled.div`
   }
 
   p {
-    font-family: "Montserrat", sans-serif;
+    font-family: "Inter", sans-serif;
     /* font-family: var(--font-montserrat); */
-    font-size: 25px;
+    font-size: 40px;
     line-height: 20px;
     letter-spacing: 1px;
-    font-weight: 600;
+    font-weight: 300;
     color: #5f5f67;
     text-align: center;
     width: 250px;
@@ -241,13 +250,14 @@ const Texts = styled.div`
 
   p {
     font-family: "Montserrat", sans-serif;
+    font-family: 'NeueThin', sans-serif;
     /* font-family: var(--font-montserrat); */
-    font-size: 13px;
+    font-size: 16px;
     line-height: 20px;
     letter-spacing: 1px;
     font-weight: 500;
     color: #5f5f67;
-    text-align: center;
+    /* text-align: center; */
     width: 230px;
 
     @media only screen and (max-width: 1160px) {

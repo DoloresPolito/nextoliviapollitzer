@@ -2,6 +2,7 @@ import Head from "next/head";
 import GlobalStyles from "../styles/global";
 // import { ParallaxProvider } from "react-scroll-parallax";
 import { appWithTranslation } from "next-i18next";
+import '../styles/fonts.css'
 
 // const bebasneue = Bebas_Neue({
 //   subsets:['latin'],
