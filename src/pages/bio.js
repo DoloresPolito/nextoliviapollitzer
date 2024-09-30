@@ -27,6 +27,7 @@ const About = () => {
           <Image src={picture} alt='background' 
           // layout="fill" 
           objectFit="cover" 
+          priority
           />
           <Box
             initial={{ x: "-70vw" }}
