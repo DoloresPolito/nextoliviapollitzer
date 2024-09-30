@@ -53,6 +53,8 @@ export default function Intro() {
           fill
           alt="image"
           style={{ objectFit: "cover" }}
+          // placeholder="blur"
+          priority
         />
         <LogoContainer
           initial={{ opacity: 0 }}
