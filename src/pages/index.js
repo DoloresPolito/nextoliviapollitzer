@@ -65,6 +65,7 @@ import Footer from "../sections/Footer";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 
 
+
 export default function Home() {
   useEffect(() => {
     const lenis = new Lenis();
@@ -78,14 +79,15 @@ export default function Home() {
   }, []);
 
   return (
-    <main>
+    <>
+
       <Intro />
       <Description />
       <Section />
       <div className="h-screen"></div>
 
       <Footer />
-    </main>
+    </>
   );
 }
 

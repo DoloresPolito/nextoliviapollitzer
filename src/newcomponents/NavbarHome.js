@@ -3,14 +3,13 @@ import Hamburger from "hamburger-react";
 import styled from "styled-components";
 import Link from "next/link";
 import Image from "next/image";
-import Menu from "./Menu";
+import Menu from "../components/Menu";
 import { useRouter } from "next/router";
 import { useTranslation } from "next-i18next";
-
 import logo from "../../public/assets/logos/navbar/logo.png";
 import instagram from "../../public/assets/icons/socialmedia/instagram-blue.png";
 
-const Navbar = ({section}) => {
+const NavbarHome = ({section}) => {
   const [width, setWidth] = useState(null);
   const { locale, locales, push } = useRouter();
   const { t: translate } = useTranslation("navbar");
@@ -38,7 +37,9 @@ const Navbar = ({section}) => {
 
   return (
     <>
-      <NavbarSection mode={medium >= 1040 ? "absolute" : "fixed"} >
+      <NavbarSection 
+
+      >
         <NavbarContainer>
           <Link href="/">
             <LogoContainer>
@@ -107,33 +108,21 @@ const LogoContainer = styled.div`
     width: 160px;
   }
 `;
-const InstaContainer = styled.div`
-  position: absolute;
-  left: 0px;
-  top: 0px;
-  height: 60px;
-  width: 60px;
 
-  img {
-    cursor: pointer;
-    position: absolute;
-    left: 0px;
-    top: 3px;
-    height: 60px;
-    width: 60px;
-  }
-`;
 const NavbarSection = styled.div`
-  z-index: 100;
-  /* background-color: white; */
+  z-index: 1000;
+  background-color: transparent;
+z-index: 10;
   top: 0;
   width: 100%;
-  height: 80px;
+  /* height: 80px; */
   box-sizing: border-box;
   padding: 20px 80px;
   margin: auto;
   display: flex;
   justify-content: flex-end;
+  position: absolute;
+
   
   .hamburger-react {
     position: relative;
@@ -209,7 +198,7 @@ const TabsBox = styled.div`
     font-size: 14px;
     line-height: 14px;
     text-decoration: none;
-    color: #5f5f67;
+    color: #ffffff;
     cursor: pointer;
     background: transparent;
     border: 0px solid;
@@ -237,7 +226,7 @@ const TabsBox = styled.div`
     position: absolute;
     top: 100%; /* Position sublinks below the main link */
     left: 0;
-    background-color: white;
+    /* background-color: white; */
     /* box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); */
     z-index: 10; /* Ensure sublinks appear above other content */
     height: 80px;
@@ -264,7 +253,7 @@ const LanguageButton = styled.button`
   background-color: transparent;
   border: none;
   cursor: pointer;
-  color: #959985;
+  color: #ffffff;
   /* font-family: "Montserrat"; */
   font-weight: 900;
   font-size: 16px;
@@ -275,4 +264,4 @@ const LanguageButton = styled.button`
   letter-spacing: 2px;
 `;
 
-export default Navbar;
+export default NavbarHome;

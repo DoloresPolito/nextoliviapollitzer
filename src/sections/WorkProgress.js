@@ -36,77 +36,76 @@ const WorkProgress = () => {
 
   return (
     <>
-      <WorkProgressSection 
+      <WorkProgressSection
       // ref={ref}
       >
-<AnimatedDiv>
-        <Content 
-        // animate={shouldAnimate ? animation : {}}
-        >
-          <div>
-            {/* <Icons>
+        <AnimatedDiv>
+          <Content
+          // animate={shouldAnimate ? animation : {}}
+          >
+            <div>
+              {/* <Icons>
 
               <Image src={dialogo} alt='chat'/>
             </Icons> */}
-            <Numbers>
-              <p>1.</p>
-            </Numbers>
-            <Titles>
-              <p>{translate("title1")}</p>
-            </Titles>
-            <Texts>
-              <p>{translate("text1")}</p>
-            </Texts>
-          </div>
-          <div>
-            {/* <Icons>
+              <Numbers>
+                <p>1.</p>
+              </Numbers>
+              <Titles>
+                <p>{translate("title1")}</p>
+              </Titles>
+              <Texts>
+                <p>{translate("text1")}</p>
+              </Texts>
+            </div>
+            <div>
+              {/* <Icons>
             <Image src={computer} alt='computer'/>
             </Icons> */}
-            <Numbers>
-              <p>2.</p>
-            </Numbers>
-            <Titles>
-              <p>{translate("title2")}</p>
-            </Titles>
-            <Texts>
-              <p>{translate("text2")}</p>
-            </Texts>
-          </div>
-          <div>
-            {/* <Icons>
+              <Numbers>
+                <p>2.</p>
+              </Numbers>
+              <Titles>
+                <p>{translate("title2")}</p>
+              </Titles>
+              <Texts>
+                <p>{translate("text2")}</p>
+              </Texts>
+            </div>
+            <div>
+              {/* <Icons>
             <Image src={text} alt='text'/>
             </Icons> */}
-            <Numbers>
-              <p>3.</p>
-            </Numbers>
-            <Titles>
-              <p>{translate("title3")}</p>
-            </Titles>
-            <Texts>
-              <p>{translate("text3")}</p>
-            </Texts>
-          </div>
-          <div>
-            {/* <Icons>
+              <Numbers>
+                <p>3.</p>
+              </Numbers>
+              <Titles>
+                <p>{translate("title3")}</p>
+              </Titles>
+              <Texts>
+                <p>{translate("text3")}</p>
+              </Texts>
+            </div>
+            <div>
+              {/* <Icons>
             <Image src={book} alt='book'/>
             </Icons> */}
-            <Numbers>
-              <p>4.</p>
-            </Numbers>
-            <Titles>
-              <p>{translate("title4")}</p>
-            </Titles>
-            <Texts>
-              <p>{translate("text4")}</p>
-            </Texts>
-          </div>
-        </Content>
+              <Numbers>
+                <p>4.</p>
+              </Numbers>
+              <Titles>
+                <p>{translate("title4")}</p>
+              </Titles>
+              <Texts>
+                <p>{translate("text4")}</p>
+              </Texts>
+            </div>
+          </Content>
         </AnimatedDiv>
       </WorkProgressSection>
     </>
   );
 };
-
 
 const WorkProgressSection = styled.div`
   height: 100vh;
@@ -193,7 +192,7 @@ const Titles = styled.div`
 
   p {
     font-family: "Bebas Neue", cursive;
-    font-family: 'EditorialMedium', sans-serif;
+    font-family: "EditorialMedium", sans-serif;
     /* font-family: var(--font-bebasneue); */
     font-size: 18px;
     line-height: 22px;
@@ -202,6 +201,7 @@ const Titles = styled.div`
     color: #5f5f67;
     /* text-align: center; */
     width: 250px;
+    text-align: center;
     @media only screen and (max-width: 1160px) {
       /* font-size: 16px; */
       line-height: 10px;
@@ -234,6 +234,7 @@ const Numbers = styled.div`
     text-align: center;
     width: 250px;
 
+
     @media only screen and (max-width: 1160px) {
       /* font-size: 20px; */
       line-height: 15px;
@@ -250,7 +251,7 @@ const Texts = styled.div`
 
   p {
     font-family: "Montserrat", sans-serif;
-    font-family: 'NeueThin', sans-serif;
+    font-family: "NeueThin", sans-serif;
     /* font-family: var(--font-montserrat); */
     font-size: 16px;
     line-height: 20px;
@@ -259,7 +260,7 @@ const Texts = styled.div`
     color: #5f5f67;
     /* text-align: center; */
     width: 230px;
-
+    text-align: center;
     @media only screen and (max-width: 1160px) {
       width: 350px;
       /* font-size: 12px; */

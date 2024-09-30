@@ -42,7 +42,7 @@ section {
 display: flex;
 flex-direction: column;
 justify-content: flex-start;
-background-color: white;
+/* background-color: white; */
 text-align: left;
 padding: 150px 100px 30px 30px;
 position: fixed;

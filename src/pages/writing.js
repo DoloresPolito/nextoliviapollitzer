@@ -21,11 +21,11 @@ const Writing2 = () => {
         <WritingSection>
           <WritingSection>
             <section>
-              <H2
-                initial={{ y: "-40%" }}
-                animate={{ y: 0 }}
-                transition={{ duration: 0.5, delay: 0.5 }}
-              >
+            <H2
+              initial={{ y: "20%" }}
+              animate={{ y: 0 }}
+              transition={{ duration: 0.8, delay: 0 }}
+            >
                 {translate("title")}
               </H2>
               <BoldLine
@@ -38,18 +38,22 @@ const Writing2 = () => {
                 <div>
                   <BoxText>     {translate("text3")}</BoxText>{" "}
                 </div>
-                <p>      {translate("text")}</p>
+                <motion.p
+                   initial={{ y: "10%" }}
+                   animate={{ y: 0 }}
+                   transition={{ duration: 0.8, delay: 0 }}
+              > {translate("text")}</motion.p>
               </Parrafo>
 
               <Link href="/contact" style={{ textDecoration: 'none' }}>
-                <Text3
-                  initial={{ x: "-30vw" }}
-                  animate={{ x: 0 }}
-                  transition={{
-                    duration: 0.5,
-                    bounce: 0.1,
-                  }}
-                >
+              <Text3
+                initial={{ x: "-10vw" }}
+                animate={{ x: 0 }}
+                transition={{
+                  duration: 0.5,
+                  bounce: 0.1,
+                }}
+              >
                     {translate("text2")}
                 </Text3>
               </Link>

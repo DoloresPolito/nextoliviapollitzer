@@ -1,15 +1,16 @@
 import React from "react";
 import Image from "next/image";
-import Background from "../../public/assets/pictures/8.JPG";
+import Background from "../../public/assets/pictures/8bis.JPG";
 import { useScroll, useTransform, motion } from "framer-motion";
 import { useRef } from "react";
 import styled from "styled-components";
 import logo from "../../public/assets/logos/logocover.png";
-
+import Navbar from "@/components/Navbar";
+import NavbarHome from "@/newcomponents/NavbarHome";
 const ScreenContainer = styled.div`
   height: 100vh;
   overflow: hidden;
-  position: relative; 
+  position: relative;
 `;
 
 const MotionDiv = styled(motion.div)`
@@ -20,8 +21,8 @@ const MotionDiv = styled(motion.div)`
 `;
 
 const LogoContainer = styled(motion.div)`
-position: absolute;
-  top: 50%;
+  position: absolute;
+  top: 55%;
   left: 50%;
   transform: translate(-50%, -50%); /* Center the element */
   display: flex;
@@ -42,6 +43,7 @@ export default function Intro() {
 
   return (
     <ScreenContainer>
+      <NavbarHome />
       <MotionDiv
       // style={{ y }}
       // ref={container}
@@ -52,7 +54,7 @@ export default function Intro() {
           alt="image"
           style={{ objectFit: "cover" }}
         />
-           <LogoContainer
+        <LogoContainer
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 2, ease: "easeInOut" }}
